@@ -7,12 +7,12 @@
 struct PrimePromise
 {
 	PrimeGenerator get_return_object() { return { *this }; }
-	std::suspend_always initial_suspend() { return {}; }
-	std::suspend_always yield_value(int value) { m_value = value; return {}; }
-	void return_void() {}
-	std::suspend_always final_suspend() noexcept { return {}; }
+	constexpr std::suspend_always initial_suspend() const noexcept { return {}; }
+	constexpr std::suspend_always yield_value(int value) noexcept { m_value = value; return {}; }
+	constexpr void return_void() const noexcept {}
+	constexpr std::suspend_always final_suspend() const noexcept { return {}; }
 
-	void unhandled_exception() { }
+	constexpr void unhandled_exception() const noexcept { }
 
 	int m_value{ 0 };
 };
@@ -34,7 +34,6 @@ int PrimeGenerator::value() const
 }
 
 //---------------------------------------------------------------------------------------------------------------------
-
 
 PrimeGenerator createPrimes(int upperLimit)
 {
