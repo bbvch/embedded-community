@@ -1,0 +1,23 @@
+@startuml
+participant Caller
+participant Coroutine #SkyBlue
+activate Caller
+create Coroutine
+Caller -> Coroutine: invoke
+deactivate Caller
+activate Coroutine #LightSkyBlue
+return suspend
+activate Caller
+Caller -> Coroutine: resume
+deactivate Caller
+activate Coroutine #LightSkyBlue
+return suspend
+activate Caller
+Caller -> Coroutine: resume
+deactivate Caller
+activate Coroutine #LightSkyBlue
+return suspend
+Caller -> Coroutine: destroy
+destroy Coroutine
+deactivate Caller
+@enduml

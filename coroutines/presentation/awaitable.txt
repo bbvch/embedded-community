@@ -1,0 +1,23 @@
+@startuml
+start
+switch (**bool awaiter.await_ready()**)
+case (true)
+case (false)
+  :prepare suspension;
+  switch (**<return> awaiter.await_suspend(handle)**)
+  case (void)
+    #Salmon:suspend to caller;
+  case (bool)
+    switch (**bool awaiter.await_suspend(handle)**)
+      case (true)
+        #Salmon:suspend to caller;
+      case (false)
+    endswitch
+  case (coroutine_handle)
+    #LightSalmon:suspend to coroutine_handle;
+  endswitch
+  :prepare continuation;
+endswitch
+  :**<return> awaiter.await_resume()**;
+  stop
+@enduml

@@ -1,0 +1,13 @@
+@startuml
+participant Caller
+participant Subroutine #Salmon
+activate Caller
+create Subroutine
+Caller -> Subroutine: invoke
+deactivate Caller
+activate Subroutine #LightSalmon
+return return
+destroy Subroutine
+activate Caller
+deactivate Caller
+@enduml
