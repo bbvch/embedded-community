@@ -10,7 +10,7 @@ public:
 	using promise_type = PrimePromise;
 	using handle_type = std::coroutine_handle<PrimePromise>;
 
-	PrimeGenerator(PrimePromise& promise) : m_handle{ handle_type::from_promise(promise) } {}
+	PrimeGenerator(PrimePromise& promise);
 	~PrimeGenerator() { m_handle.destroy(); }
 	bool next();
 	int value() const;

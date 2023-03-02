@@ -19,6 +19,10 @@ struct PrimePromise
 
 //---------------------------------------------------------------------------------------------------------------------
 
+PrimeGenerator::PrimeGenerator(PrimePromise& promise) 
+	: m_handle{ handle_type::from_promise(promise) }
+{}
+
 bool PrimeGenerator::next()
 {
 	if (!m_handle.done())

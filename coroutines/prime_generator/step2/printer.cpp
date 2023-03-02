@@ -29,6 +29,10 @@ struct PrinterAwaiter
 
 //---------------------------------------------------------------------------------------------------------------------
 
+Printer::Printer(PrinterPromise& promise)
+	: m_handle{ handle_type::from_promise(promise) }
+{}
+
 void Printer::print(int value) const
 {
 	m_handle.promise().m_value = value;

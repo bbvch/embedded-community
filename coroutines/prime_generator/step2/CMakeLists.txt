@@ -1,4 +1,4 @@
-PROJECT(prime_generator_stepr2)
+PROJECT(prime_generator_step2)
 
 SET(CMAKE_CXX_STANDARD 20)
 

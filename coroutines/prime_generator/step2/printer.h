@@ -10,7 +10,7 @@ public:
 	using promise_type = PrinterPromise;
 	using handle_type = std::coroutine_handle<PrinterPromise>;
 
-	Printer(PrinterPromise& promise) : m_handle{ handle_type::from_promise(promise) } {}
+	Printer(PrinterPromise& promise);
 	~Printer() { m_handle.destroy(); }
 	void print(int value) const;
 
