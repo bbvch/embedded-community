@@ -1,5 +1,8 @@
-# Instructions
-## Stage1 to Stage2: Add concept support
+# Test program "add"
+## About
+This is the second example and shows how to write its own _concept_. Also demonstrates that there are concepts which cannot replace `typename` within the template parameters.
+## Instructions
+### Stage1 to Stage2: Add concept support
 * Show that original _add()_ function makes no sense to be called from _int_ and _const char*_.
 * Show that function is not compiling for _int_ and _std::string_ parameter, but error message is again showing implementation details.
 * Create a concept __addable__:

@@ -1,13 +1,15 @@
-# Instructions
-## Stage1 to Stage2: Adding SFINAE based solution
+# Test program "sort"
+## About
+This is the first example where we first show how concept-like techniques where possible by using SFINAE-based tricks.
+
+## Instructions
+### Stage1 to Stage2: Adding SFINAE based solution
 * Pass flag `--std=c++17` to compiler explorer.
 * Load _stage1.cpp_ into compiler explorer.
 * Show that _my_regular_sort_ can indeed not be called with iterators to a list by uncommenting statement.
 * Rename _my_regular_sort_ and _my_copy_sort_ to _my_sort_.
 
 __Code will no longer compile!__
-
--> __Show SFINAE slides__
 
 * Add _using_ statements for type_traits:
 ```
@@ -51,7 +53,7 @@ using is_forward_only_it = std::conjunction<
 
 __Solution prior concepts: Works also with C++17!__
 
-## Stage2 to Stage3: Replace SFINAE with concept
+### Stage2 to Stage3: Replace SFINAE with concept
 * Change compiler flag to `--std=c++20` 
 * Replace `is_random_access_it` by a concept:
 ```
@@ -103,7 +105,7 @@ __Compiles again.__
 
 __Working solution with concepts.__
 
-## Step3 to Step4: Other options with concepts.
+### Step3 to Step4: Other options with concepts.
 * Showcase other possibilities of _requires_ clause after _template_ statement:
 ```
 template <typename It> requires is_random_access_it<It>
