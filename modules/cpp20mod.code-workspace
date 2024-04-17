@@ -1,0 +1,49 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "[cpp]": {
+            "editor.defaultFormatter": "xaver.clang-format"
+        },
+        "clang-format.style": "file",
+        "clang-format.executable": "/usr/bin/clang-format-16",
+        "C_Cpp.formatting": "disabled",
+        "C_Cpp.intelliSenseEngine": "disabled",
+        "clangd.arguments": [
+            "--log=verbose",
+            "--pretty",
+            "--background-index=true",
+            "--all-scopes-completion",
+            "--compile-commands-dir=${workspaceFolder}/build/clang18-ninja-x86_64-debug",
+            "--clang-tidy",
+            "--header-insertion=never"
+        ],
+        "clangd.path": "/usr/bin/clangd-18",
+        "cmake.cmakePath": "/opt/kcmake-3.28.1/bin/cmake",
+        "cmake.useCMakePresets": "always",
+        "editor.formatOnSave": true,
+        "editor.inlayHints.enabled": "off",
+        "files.insertFinalNewline": true,
+        "files.trimTrailingWhitespace": true,
+        "files.trimFinalNewlines": true,
+        "files.eol": "\n",
+        "files.autoSave": "off",
+        "files.exclude": {
+            "**/.git": true
+        },
+        "files.associations": {
+            "*.cppm": "cpp"
+        }
+    },
+    "extensions": {
+        "recommendations": [
+            "ms-vscode.cpptools",
+            "llvm-vs-code-extensions.vscode-clangd",
+            "xaver.clang-format",
+            "ms-vscode.cmake-tools"
+        ]
+    }
+}

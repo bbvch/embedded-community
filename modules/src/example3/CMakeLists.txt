@@ -1,0 +1,2 @@
+add_subdirectory(libOneModulePerFile)
+add_subdirectory(main)

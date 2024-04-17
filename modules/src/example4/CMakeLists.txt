@@ -1,0 +1,2 @@
+add_subdirectory(libModuleWithPartitions)
+add_subdirectory(main)
