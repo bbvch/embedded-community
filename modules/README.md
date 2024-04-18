@@ -1,6 +1,6 @@
 # C++20 Modules Test
 
-This repository hosts scripts/tools/code to experiment with the C++20 modules.
+This repository hosts scripts/tools/code to experiment with the C++20 modules. The presentation coming out of these experiments can be found at [`presentation/cpp20_modules.pdf`](./presentation/cpp20_modules.pdf).
 
 ## Getting started
 
