@@ -11,3 +11,7 @@ Presentation about coroutines including examples:
 ## Concepts
 Presentation about C++ concepts with examples:
 [Concepts](concepts/Concepts.md)
+
+## Modules
+Examples about C++ modules:
+[Modules](modules/README.md)

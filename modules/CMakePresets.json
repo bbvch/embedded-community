@@ -1,0 +1,58 @@
+{
+    "version": 2,
+    "configurePresets": [
+        {
+            "name": "clang-debug-base",
+            "hidden": true,
+            "description": "Clang based preset base",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/build/${presetName}-inst",
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "1"
+            },
+            "generator": "Ninja"
+        },
+        {
+            "name": "clang17-ninja-x86_64-debug",
+            "inherits": "clang-debug-base",
+            "displayName": "Clang 17.0.3 x86_64 Debug",
+            "description": "Using compiler CXX = /usr/bin/clang++-17",
+            "cacheVariables": {
+                "CMAKE_CXX_COMPILER": "/usr/bin/clang++-17"
+            }
+        },
+        {
+            "name": "clang16-ninja-x86_64-debug",
+            "inherits": "clang-debug-base",
+            "displayName": "Clang 16.0.6 x86_64-pc-linux-gnu",
+            "description": "Using compiler CXX = /usr/bin/clang++-16",
+            "cacheVariables": {
+                "CMAKE_CXX_COMPILER": "/usr/bin/clang++-16"
+            }
+        },
+        {
+            "name": "clang18-ninja-x86_64-debug",
+            "inherits": "clang-debug-base",
+            "displayName": "Clang 18.0.6 x86_64-pc-linux-gnu",
+            "description": "Using compiler CXX = /usr/bin/clang++-18",
+            "cacheVariables": {
+                "CMAKE_CXX_COMPILER": "/usr/bin/clang++-18"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "clang17-ninja-x86_64-debug",
+            "configurePreset": "clang17-ninja-x86_64-debug"
+        },
+        {
+            "name": "clang16-ninja-x86_64-debug",
+            "configurePreset": "clang16-ninja-x86_64-debug"
+        },
+        {
+            "name": "clang18-ninja-x86_64-debug",
+            "configurePreset": "clang18-ninja-x86_64-debug"
+        }
+    ]
+}
