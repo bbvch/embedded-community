@@ -1,0 +1,16 @@
+{
+    "name": "C++ (GCC 16.2.0)",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "remoteUser": "vscode",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cmake-tools",
+                "mhutchie.git-graph"
+            ]
+        }
+    }
+}
